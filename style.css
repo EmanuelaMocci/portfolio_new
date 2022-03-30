@@ -42,7 +42,7 @@ body {
   text-transform: uppercase;
   /* text-shadow: 0px 0px 10px #0086c4, 0px 0px 20px #0086c4; */
   font-family: "Viga", sans-serif;
-  animation: rotate 2s 7s forwards, animate 5s 4.5s forwards;
+  animation: animate 5s 4.5s forwards;
   display: inline-block;
   margin-top: 10px;
 }
@@ -80,21 +80,31 @@ body {
     transform: rotate(20deg);
   }
 } */
-
+@keyframes enter {
+  100% {
+    color: #f4ee7d;
+    text-shadow: 0px 0px 10px #f4ee7d, 0px 0px 20px #f4ee7d;
+  }
+}
 .enter {
   background-color: transparent;
-  color: white;
   font-size: 15px;
   border: none;
   /* border: 1px solid white; */
   padding: 20px 35px;
   position: absolute;
   bottom: 100px;
-  right: 48%;
+  right: 47%;
   cursor: pointer;
   transition: 0.5s;
+  /* animation: enter 3s 8s forwards; */
 }
-.enter:hover {
+.enter a {
+  text-decoration: none;
+  color: black;
+  animation: enter 3s 8s forwards;
+}
+.enter:hover a {
   color: #f4ee7d;
   text-shadow: 0px 0px 10px #f4ee7d, 0px 0px 20px #f4ee7d;
 }
